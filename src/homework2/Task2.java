@@ -21,6 +21,7 @@ public class Task2 {
         logger.addHandler(logFile);
         try (FileWriter fileWriter = new FileWriter(filePath, false)){
             fileWriter.write(string);
+            logger.log(Level.ALL, "Запись в файл произведена");
         } catch (IOException e){
             logger.log(Level.ALL, "Ошибка записи");
         }
