@@ -9,9 +9,11 @@
 Используйте StringBuilder для подготовки ответа
  */
 package homework2;
+import java.io.IOException;
+
 import static homework2.Task2.writeToFile;
 public class Task1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String jsonStr = "{{ \"фамилия\":\"Иванов\",\"оценка\":\"5\",\"предмет\":\"Математика\"},{\"фамилия\":\"Петрова\",\"оценка\":\"4\",\"предмет\":\"Информатика\"},{\"фамилия\":\"Краснов\",\"оценка\":\"5\",\"предмет\":\"Физика\"}}";
         System.out.println(result(jsonStr));
         writeToFile(result(jsonStr), "text.txt");
